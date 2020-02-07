@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
@@ -22,7 +23,8 @@ namespace ScoreJs.API.Controllers
         [HttpGet]
         public async Task<IActionResult> getValues()
         {
-            var score = await _context.score.ToListAsync();
+            var score = await _context.score.OrderByDescending(x => x.value).ToListAsync();
+            
             return Ok(score);
         }
 
