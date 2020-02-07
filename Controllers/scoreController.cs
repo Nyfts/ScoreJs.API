@@ -1,7 +1,11 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ScoreJs.API.Data;
+using ScoreJs.API.DTOs;
+using ScoreJs.API.Models;
 
 namespace ScoreJs.API.Controllers
 {
@@ -18,13 +22,23 @@ namespace ScoreJs.API.Controllers
         [HttpGet]
         public async Task<IActionResult> getValues()
         {
-            var Values = await _context.score.ToListAsync();
-            return Ok(Values);
+            var score = await _context.score.ToListAsync();
+            return Ok(score);
         }
 
         [HttpPost]
-        public void Put([FromBody] string value)
+        public async Task<IActionResult> post(scoreDTO scoreDTO)
         {
+            var score = new score 
+            {
+                name = scoreDTO.name,
+                value = scoreDTO.value
+            };
+
+            await _context.score.AddAsync(score);
+            await _context.SaveChangesAsync();
+
+            return StatusCode(201);
         }
     }
 }
