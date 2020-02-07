@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luan.jesus\\Desktop\\Internet Explorer\\ScoreJs.API\\SCOREJS.API\\SCOREJS.API.csproj": {}
+    "C:\\Users\\luan.jesus\\Desktop\\Internet Explorer\\ScoreJs.API\\SCOREJS.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luan.jesus\\Desktop\\Internet Explorer\\ScoreJs.API\\SCOREJS.API\\SCOREJS.API.csproj": {
+    "C:\\Users\\luan.jesus\\Desktop\\Internet Explorer\\ScoreJs.API\\SCOREJS.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luan.jesus\\Desktop\\Internet Explorer\\ScoreJs.API\\SCOREJS.API\\SCOREJS.API.csproj",
+        "projectUniqueName": "C:\\Users\\luan.jesus\\Desktop\\Internet Explorer\\ScoreJs.API\\SCOREJS.API.csproj",
         "projectName": "SCOREJS.API",
-        "projectPath": "C:\\Users\\luan.jesus\\Desktop\\Internet Explorer\\ScoreJs.API\\SCOREJS.API\\SCOREJS.API.csproj",
+        "projectPath": "C:\\Users\\luan.jesus\\Desktop\\Internet Explorer\\ScoreJs.API\\SCOREJS.API.csproj",
         "packagesPath": "C:\\Users\\luan.jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luan.jesus\\Desktop\\Internet Explorer\\ScoreJs.API\\SCOREJS.API\\obj\\",
+        "outputPath": "C:\\Users\\luan.jesus\\Desktop\\Internet Explorer\\ScoreJs.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luan.jesus\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -35,6 +35,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
